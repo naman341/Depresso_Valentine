@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   margin: 0;
   padding: 0;
@@ -28,84 +29,29 @@ body {
 
 .container {
   background: rgba(255, 255, 255, 0.2);
-  padding: 40px;
+  padding: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
   position: relative;
   z-index: 1;
+  width: 90%;
+  max-width: 500px;
 }
 
-/* Floating Hearts */
-.heart {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: #ff6f61;
-  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 50% 75%, 18% 100%, 0% 38%);
-  animation: float 5s infinite ease-in-out;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 0.7;
-  }
-  50% {
-    transform: translateY(-20px) rotate(180deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0) rotate(360deg);
-    opacity: 0.7;
-  }
-}
-
-/* Add multiple hearts */
-.heart:nth-child(1) {
-  top: 10%;
-  left: 20%;
-  animation-delay: 0s;
-}
-
-.heart:nth-child(2) {
-  top: 30%;
-  left: 70%;
-  animation-delay: 2s;
-}
-
-.heart:nth-child(3) {
-  top: 50%;
-  left: 40%;
-  animation-delay: 4s;
-}
-
-.heart:nth-child(4) {
-  top: 70%;
-  left: 10%;
-  animation-delay: 6s;
-}
-
-.heart:nth-child(5) {
-  top: 90%;
-  left: 80%;
-  animation-delay: 8s;
-}
-
-/* Rest of the CSS remains the same */
 h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 15px;
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 10px 0;
 }
 
 button {
   padding: 10px 20px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 10px;
   border: none;
   border-radius: 5px;
@@ -134,16 +80,16 @@ button {
 }
 
 #response {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-top: 20px;
   color: #ff4757;
   font-weight: bold;
 }
 
 #bearGif {
-  width: 200px;
+  width: 150px;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 /* SVG Animation Styles */
@@ -216,12 +162,36 @@ svg path#heart {
   }
 }
 
+/* Floating Hearts */
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ff6f61;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 50% 75%, 18% 100%, 0% 38%);
+  animation: float 5s infinite ease-in-out;
+}
 
-/* Black Rose Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+    opacity: 0.7;
+  }
+}
+
+/* Floating Black Roses */
 .rose {
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background: url('https://www.clipartmax.com/png/middle/207-2075135_black-rose-clip-art-at-clker-vector-clip-art-black-rose.png') no-repeat center center;
   background-size: contain;
   animation: floatRose 10s infinite ease-in-out;
@@ -241,63 +211,32 @@ svg path#heart {
   }
 }
 
-/* Add multiple roses */
-.rose:nth-child(1) {
-  left: 10%;
-  animation-delay: 0s;
-  animation-duration: 12s;
-}
+/* Media Queries for Mobile */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
 
-.rose:nth-child(2) {
-  left: 20%;
-  animation-delay: 2s;
-  animation-duration: 14s;
-}
+  p {
+    font-size: 1rem;
+  }
 
-.rose:nth-child(3) {
-  left: 30%;
-  animation-delay: 4s;
-  animation-duration: 16s;
-}
+  button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
 
-.rose:nth-child(4) {
-  left: 40%;
-  animation-delay: 6s;
-  animation-duration: 18s;
-}
+  #bearGif {
+    width: 120px;
+  }
 
-.rose:nth-child(5) {
-  left: 50%;
-  animation-delay: 8s;
-  animation-duration: 20s;
-}
+  .heart {
+    width: 15px;
+    height: 15px;
+  }
 
-.rose:nth-child(6) {
-  left: 60%;
-  animation-delay: 10s;
-  animation-duration: 12s;
-}
-
-.rose:nth-child(7) {
-  left: 70%;
-  animation-delay: 12s;
-  animation-duration: 14s;
-}
-
-.rose:nth-child(8) {
-  left: 80%;
-  animation-delay: 14s;
-  animation-duration: 16s;
-}
-
-.rose:nth-child(9) {
-  left: 90%;
-  animation-delay: 16s;
-  animation-duration: 18s;
-}
-
-.rose:nth-child(10) {
-  left: 100%;
-  animation-delay: 18s;
-  animation-duration: 20s;
+  .rose {
+    width: 30px;
+    height: 30px;
+  }
 }
