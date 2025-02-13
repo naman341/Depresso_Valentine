@@ -1,5 +1,5 @@
 /* General Styles */
-body {
+body, html {
   margin: 0;
   padding: 0;
   display: flex;
@@ -12,19 +12,7 @@ body {
   font-family: 'Arial', sans-serif;
   color: #fff;
   text-align: center;
-  overflow: hidden;
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  /* Remove overflow: hidden to enable scrolling */
 }
 
 .container {
@@ -39,6 +27,50 @@ body {
   max-width: 600px;
   margin: 20px;
 }
+
+/* Rest of the CSS remains the same */
+
+/* General Styles */
+/* body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff6f61, #ffcccb, #ff6f61);
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+} */
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* .container {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  max-width: 600px;
+  margin: 20px;
+} */
 
 h1 {
   font-size: 2.5rem;
