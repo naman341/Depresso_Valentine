@@ -22,7 +22,7 @@ yesButton.addEventListener('click', () => {
 
 noButton.addEventListener('click', () => {
   if (noButton.textContent === "No") {
-    noButton.textContent = "Yes";
+    noButton.textContent = "No";
     response.textContent = "Are you sure you want to press yes? 🥺";
   }
 
