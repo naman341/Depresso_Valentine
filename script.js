@@ -12,11 +12,17 @@ yesButton.addEventListener('click', () => {
   yesButton.style.display = "none";
   noButton.style.display = "none";
   svgContainer.style.display = "block"; // Show the SVG animation
+
+  // Scroll to the bottom of the page
+  window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior: 'smooth' // Smooth scrolling
+  });
 });
 
 noButton.addEventListener('click', () => {
   if (noButton.textContent === "No") {
-    noButton.textContent = "No";
+    noButton.textContent = "Yes";
     response.textContent = "Are you sure you want to press yes? 🥺";
   }
 
