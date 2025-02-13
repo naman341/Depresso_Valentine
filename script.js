@@ -12,12 +12,6 @@ yesButton.addEventListener('click', () => {
   yesButton.style.display = "none";
   noButton.style.display = "none";
   svgContainer.style.display = "block"; // Show the SVG animation
-
-  // Scroll to the bottom of the page
-  window.scrollTo({
-    top: document.body.scrollHeight,
-    behavior: 'smooth' // Smooth scrolling
-  });
 });
 
 noButton.addEventListener('click', () => {
@@ -36,3 +30,5 @@ noButton.addEventListener('click', () => {
   yesButton.style.transform = `scale(${yesButtonSize})`;
   yesButton.style.transition = "transform 0.3s ease"; // Smooth scaling animation
 });
+
+
